@@ -131,6 +131,9 @@ initial begin
             TDI = 1; // SHIFT 5
         #10 TMS = 1; // UPDATE_DR*/
 
+        
+        /* LOAD 3, RUNTEST
+
         #10 TMS = 0; // IDLE
         #10 TMS = 1; // SELECT_DR
         #10 TMS = 1; // SELECT_IR
@@ -327,6 +330,55 @@ initial begin
         #10 TMS = 0; // IDLE
 
         #1000 TMS = 1;
+        LOAD 3, RUNTEST */ 
+
+    #115 TMS = 0; // idle
+    #10 TMS = 1; // select_DR
+    #10 TMS = 1; // select_IR
+    #10 TMS = 0; // capt_IR
+    #10 TMS = 0; // SHIFT
+    #10 TMS = 0;
+        TDI = 1;
+    #10 TMS = 0;
+        TDI = 0;
+    #10 TMS = 0;
+        TDI = 1;
+    #10 TMS = 1; // EXIT_IR
+        TDI = 0;
+    #10 TMS = 1; // UPDATE_IR
+    #10 TMS = 0; // IDLE
+
+    #5000 TMS = 1; // select_DR
+    #10 TMS = 0; // capture_DR
+    #10 TMS = 0; // SHIFT_DR
+    #10 TMS = 0; // 2
+        TDI = 1;
+    #10 TMS = 0; // 2
+        TDI = 0;
+    #10 TMS = 0; // 2
+        TDI = 1;
+    #10 TMS = 0; // 2
+        TDI = 0;
+    #10 TMS = 0; // 2
+        TDI = 1;
+    #10 TMS = 0; // 2
+        TDI = 0;
+    #10 TMS = 0; // 2
+        TDI = 1;
+    #10 TMS = 0; // 2
+        TDI = 0;
+    #10 TMS = 0; // 2
+        TDI = 1;
+    #10 TMS = 0; // 2
+        TDI = 0;
+    #10 TMS = 0; // 2
+        TDI = 1;
+    #10 TMS = 0; // 2
+        TDI = 0;
+    #10 TMS = 0; // 2
+        TDI = 1;
+    #10 TMS = 1;
+        TDI = 0;
 
 
 

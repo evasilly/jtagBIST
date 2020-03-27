@@ -24,144 +24,150 @@ module Core_FSM(
     input           clk,
     input [3:0]     impact,
 
-    output [3:0]    result
+    output reg [3:0]    result
     );
 
     reg [3:0] state = 4'b0000;
-    assign result = state;
+    reg [3:0] nextstate = 4'b0000;
 
     always@(posedge clk)
+    begin
+        state <= nextstate;
+        result <= nextstate;
+    end
+
+    always@(state or impact)
     begin
 
         case (state)
             4'b0000: begin
-                casex(impact)
-                    4'b000x: state = 4'b0010;
-                    4'b1000: state = 4'b0110;
-                    4'b1x01: state = 4'b1010;
-                    4'b1111: state = 4'b1101;
+                case(impact)
+                    4'b0000: begin nextstate = 4'b0010; end
+                    4'b1000: begin nextstate = 4'b0110; end
+                    4'b1001: begin nextstate = 4'b1010; end
+                    4'b1111: begin nextstate = 4'b1101; end
                 endcase
             end
             4'b0001: begin
-                casex(impact)
-                    4'b1111: state = 4'b0000;
-                    4'b1011: state = 4'b0011;
-                    4'b1100: state = 4'b1000;
-                    4'b0010: state = 4'b1011;
+                case(impact)
+                    4'b1111: begin nextstate = 4'b0000; end
+                    4'b1011: begin nextstate = 4'b0011; end
+                    4'b1100: begin nextstate = 4'b1000; end
+                    4'b0010: begin nextstate = 4'b1011; end
                 endcase
             end
             4'b0010: begin
-                casex(impact)
-                    4'b1011: state = 4'b0001;
-                    4'b1111: state = 4'b0101;
-                    4'b0110: state = 4'b0111;
-                    4'b00x0: state = 4'b1001;
-                    4'b1100: state = 4'b1110;
+                case(impact)
+                    4'b1011: begin nextstate = 4'b0001; end
+                    4'b1111: begin nextstate = 4'b0101; end
+                    4'b0110: begin nextstate = 4'b0111; end
+                    4'b0000: begin nextstate = 4'b1001; end
+                    4'b1100: begin nextstate = 4'b1110; end
                 endcase
             end
             4'b0011: begin
-                casex(impact)
-                    4'b1010: state = 4'b0100;
-                    4'b0110: state = 4'b1111;
+                case(impact)
+                    4'b1010: begin nextstate = 4'b0100; end
+                    4'b0110: begin nextstate = 4'b1111; end
                 endcase
             end
             4'b0100: begin
-                casex(impact)
-                    4'b1111: state = 4'b0001;
-                    4'b0001: state = 4'b0111;
-                    4'b0101: state = 4'b1100;
+                case(impact)
+                    4'b1111: begin nextstate = 4'b0001; end
+                    4'b0001: begin nextstate = 4'b0111; end
+                    4'b0101: begin nextstate = 4'b1100; end
                 endcase
             end
             4'b0101: begin
-                casex(impact)
-                    4'b1100: state = 4'b0000;
-                    4'b0011: state = 4'b0010;
-                    4'b1111: state = 4'b0100;
-                    4'b0010: state = 4'b1000;
+                case(impact)
+                    4'b1100: begin nextstate = 4'b0000; end
+                    4'b0011: begin nextstate = 4'b0010; end
+                    4'b1111: begin nextstate = 4'b0100; end
+                    4'b0010: begin nextstate = 4'b1000; end
                 endcase
             end
             4'b0110: begin
-                casex(impact)
-                    4'b0001: state = 4'b0001;
-                    4'b0010: state = 4'b0101;
-                    4'b0011: state = 4'b1000;
-                    4'b1001: state = 4'b1011;
-                    4'b1111: state = 4'b1110;
-                    4'b1110: state = 4'b1111;
+                case(impact)
+                    4'b0001: begin nextstate = 4'b0001; end
+                    4'b0010: begin nextstate = 4'b0101; end
+                    4'b0011: begin nextstate = 4'b1000; end
+                    4'b1001: begin nextstate = 4'b1011; end
+                    4'b1111: begin nextstate = 4'b1110; end
+                    4'b1110: begin nextstate = 4'b1111; end
                 endcase
             end
             4'b0111: begin
-                casex(impact)
-                    4'b0000: state = 4'b0000;
-                    4'b11x0: state = 4'b0010;
-                    4'b0101: state = 4'b0101;
-                    4'b0011: state = 4'b1010;
+                case(impact)
+                    4'b0000: begin nextstate = 4'b0000; end
+                    4'b1100: begin nextstate = 4'b0010; end
+                    4'b0101: begin nextstate = 4'b0101; end
+                    4'b0011: begin nextstate = 4'b1010; end
                 endcase
             end
             4'b1000: begin
-                casex(impact)
-                    4'b1010: state = 4'b0001;
-                    4'b1101: state = 4'b0011;
-                    4'b0011: state = 4'b0111;
-                    4'b1011: state = 4'b1011;
-                    4'b0010: state = 4'b1101;
+                case(impact)
+                    4'b1010: begin nextstate = 4'b0001; end
+                    4'b1101: begin nextstate = 4'b0011; end
+                    4'b0011: begin nextstate = 4'b0111; end
+                    4'b1011: begin nextstate = 4'b1011; end
+                    4'b0010: begin nextstate = 4'b1101; end
                 endcase
             end
             4'b1001: begin
-                casex(impact)
-                    4'b0000: state = 4'b0100;
-                    4'b0001: state = 4'b0110;
-                    4'b1110: state = 4'b1100;
-                    4'b1010: state = 4'b1110;
+                case(impact)
+                    4'b0000: begin nextstate = 4'b0100; end
+                    4'b0001: begin nextstate = 4'b0110; end
+                    4'b1110: begin nextstate = 4'b1100; end
+                    4'b1010: begin nextstate = 4'b1110; end
                 endcase
             end
             4'b1010: begin
-                casex(impact)
-                    4'b0011: state = 4'b0010;
-                    4'b1111: state = 4'b0101;
-                    4'b1010: state = 4'b1000;
-                    4'b0001: state = 4'b1101;
+                case(impact)
+                    4'b0011: begin nextstate = 4'b0010; end
+                    4'b1111: begin nextstate = 4'b0101; end
+                    4'b1010: begin nextstate = 4'b1000; end
+                    4'b0001: begin nextstate = 4'b1101; end
                 endcase
             end
             4'b1011: begin
-                casex(impact)
-                    4'b1010: state = 4'b0001;
-                    4'b0101: state = 4'b0100;
-                    4'b1101: state = 4'b1000;
-                    4'b1001: state = 4'b1110;
+                case(impact)
+                    4'b1010: begin nextstate = 4'b0001; end
+                    4'b0101: begin nextstate = 4'b0100; end
+                    4'b1101: begin nextstate = 4'b1000; end
+                    4'b1001: begin nextstate = 4'b1110; end
                 endcase
             end
             4'b1100: begin
-                casex(impact)
-                    4'b1110: state = 4'b0011;
-                    4'b1001: state = 4'b0110;
-                    4'b1010: state = 4'b1001;
-                    4'b1111: state = 4'b1011;
-                    4'b0000: state = 4'b1110;
+                case(impact)
+                    4'b1110: begin nextstate = 4'b0011; end
+                    4'b1001: begin nextstate = 4'b0110; end
+                    4'b1010: begin nextstate = 4'b1001; end
+                    4'b1111: begin nextstate = 4'b1011; end
+                    4'b0000: begin nextstate = 4'b1110; end
                 endcase
             end
             4'b1101: begin
-                casex(impact)
-                    4'b0010: state = 4'b0000;
-                    4'b0101: state = 4'b0010;
-                    4'b1001: state = 4'b0011;
-                    4'b1110: state = 4'b0101;
-                    4'b1111: state = 4'b1010;
+                case(impact)
+                    4'b0010: begin nextstate = 4'b0000; end
+                    4'b0101: begin nextstate = 4'b0010; end
+                    4'b1001: begin nextstate = 4'b0011; end
+                    4'b1110: begin nextstate = 4'b0101; end
+                    4'b1111: begin nextstate = 4'b1010; end
                 endcase
             end
             4'b1110: begin
-                casex(impact)
-                    4'b1111: state = 4'b0001;
-                    4'b1101: state = 4'b0100;
-                    4'b11x0: state = 4'b0111;
+                case(impact)
+                    4'b1111: begin nextstate = 4'b0001; end
+                    4'b1101: begin nextstate = 4'b0100; end
+                    4'b1100: begin nextstate = 4'b0111; end
                 endcase
             end
             4'b1111: begin
-                casex(impact)
-                    4'b1100: state = 4'b0011;
-                    4'b1010: state = 4'b0110;
-                    4'b0000: state = 4'b1010;
-                    4'b01xx: state = 4'b1100;
+                case(impact)
+                    4'b1100: begin nextstate = 4'b0011; end
+                    4'b1010: begin nextstate = 4'b0110; end
+                    4'b0000: begin nextstate = 4'b1010; end
+                    4'b0100: begin nextstate = 4'b1100; end
                 endcase
             end
         endcase

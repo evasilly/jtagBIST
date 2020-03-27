@@ -27,6 +27,29 @@ string str_to_hex(string s) {
     if (s == "1111") return "F";
 }
 
+string int_to_hex(int s) {
+    if (s == 0) return "0";
+    if (s == 1) return "1";
+    if (s == 2) return "2";
+    if (s == 3) return "3";
+    if (s == 4) return "4";
+    if (s == 5) return "5";
+    if (s == 6) return "6";
+    if (s == 7) return "7";
+    if (s == 8) return "8";
+    if (s == 9) return "9";
+    if (s == 10) return "A";
+    if (s == 11) return "B";
+    if (s == 12) return "C";
+    if (s == 13) return "D";
+    if (s == 14) return "E";
+    if (s == 15) return "F";
+}
+
+string make_memadr(int a) {
+    return int_to_hex(a/16) + int_to_hex(a%16);
+}
+
 string make_binary(int x) {
     string result = "0000";
 
@@ -157,8 +180,8 @@ int main()
                     if (x == previous_state)
                         continue;
                     fsm_table[previous_state][x].second = 1;
-                    previous_state = x;
                     cout << x << endl;
+                    previous_state = x;
                     solution.push_back(x);
                 }
             }
@@ -166,8 +189,8 @@ int main()
     }
 
     previous_state = 0;
-    int memaddr = 255 - solution.size();
-    //int memaddr = 0;
+    //int memaddr = 255 - solution.size();
+    int memaddr = 0;
     while(!solution.empty()) { // INTEST code generation
         state = solution.front();
         solution.pop_front();
@@ -176,8 +199,9 @@ int main()
         cout << "SDR 5 TDI (0"<< str_to_hex(fsm_table[previous_state][state].first) << ");" << endl;
         cout << "SDR 5 TDI (1"<< str_to_hex(fsm_table[previous_state][state].first) << ") TDO ("<< str_to_hex(make_binary(previous_state)) << ");"<< endl;
 
-        //cout << "memory["<< memaddr <<"] = 8'b"<< fsm_table[previous_state][state].first << make_binary(state) <<";" << endl;
-        memaddr++;
+//        cout << "memory["<< memaddr <<"] = 8'b"<< fsm_table[previous_state][state].first << make_binary(state) <<";" << endl;
+//        cout << "SDR 16 TDI(" <<make_memadr(memaddr) << str_to_hex(fsm_table[previous_state][state].first) << int_to_hex(state) <<");" << endl;
+//        memaddr++;
 
         previous_state = state;
     }

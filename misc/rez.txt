@@ -1,0 +1,457 @@
+2
+1
+0
+6
+1
+3
+4
+1
+8
+1
+11
+1
+0
+10
+2
+5
+0
+13
+0
+2
+7
+0
+2
+9
+4
+7
+2
+14
+1
+3
+15
+3
+4
+12
+3
+4
+7
+5
+2
+5
+4
+7
+5
+8
+3
+15
+6
+5
+0
+6
+8
+7
+10
+5
+0
+6
+11
+4
+12
+6
+14
+4
+12
+6
+15
+10
+8
+11
+8
+13
+2
+9
+6
+5
+0
+2
+9
+12
+9
+14
+7
+10
+13
+3
+4
+1
+11
+14
+4
+12
+11
+4
+12
+14
+4
+7
+0
+13
+5
+0
+13
+10
+2
+5
+8
+1
+3
+15
+12
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (0);
+SDR 5 TDI (0B);
+SDR 5 TDI (1B) TDO (2);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (1);
+SDR 5 TDI (08);
+SDR 5 TDI (18) TDO (0);
+SDR 5 TDI (01);
+SDR 5 TDI (11) TDO (6);
+SDR 5 TDI (0B);
+SDR 5 TDI (1B) TDO (1);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (3);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (4);
+SDR 5 TDI (0C);
+SDR 5 TDI (1C) TDO (1);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (8);
+SDR 5 TDI (02);
+SDR 5 TDI (12) TDO (1);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (B);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (1);
+SDR 5 TDI (09);
+SDR 5 TDI (19) TDO (0);
+SDR 5 TDI (03);
+SDR 5 TDI (13) TDO (A);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (2);
+SDR 5 TDI (0C);
+SDR 5 TDI (1C) TDO (5);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (0);
+SDR 5 TDI (02);
+SDR 5 TDI (12) TDO (D);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (0);
+SDR 5 TDI (06);
+SDR 5 TDI (16) TDO (2);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (7);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (0);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (2);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (9);
+SDR 5 TDI (01);
+SDR 5 TDI (11) TDO (4);
+SDR 5 TDI (0C);
+SDR 5 TDI (1C) TDO (7);
+SDR 5 TDI (0C);
+SDR 5 TDI (1C) TDO (2);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (E);
+SDR 5 TDI (0B);
+SDR 5 TDI (1B) TDO (1);
+SDR 5 TDI (06);
+SDR 5 TDI (16) TDO (3);
+SDR 5 TDI (0C);
+SDR 5 TDI (1C) TDO (F);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (3);
+SDR 5 TDI (05);
+SDR 5 TDI (15) TDO (4);
+SDR 5 TDI (0E);
+SDR 5 TDI (1E) TDO (C);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (3);
+SDR 5 TDI (01);
+SDR 5 TDI (11) TDO (4);
+SDR 5 TDI (05);
+SDR 5 TDI (15) TDO (7);
+SDR 5 TDI (03);
+SDR 5 TDI (13) TDO (5);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (2);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (5);
+SDR 5 TDI (01);
+SDR 5 TDI (11) TDO (4);
+SDR 5 TDI (05);
+SDR 5 TDI (15) TDO (7);
+SDR 5 TDI (02);
+SDR 5 TDI (12) TDO (5);
+SDR 5 TDI (0D);
+SDR 5 TDI (1D) TDO (8);
+SDR 5 TDI (06);
+SDR 5 TDI (16) TDO (3);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (F);
+SDR 5 TDI (02);
+SDR 5 TDI (12) TDO (6);
+SDR 5 TDI (0C);
+SDR 5 TDI (1C) TDO (5);
+SDR 5 TDI (08);
+SDR 5 TDI (18) TDO (0);
+SDR 5 TDI (03);
+SDR 5 TDI (13) TDO (6);
+SDR 5 TDI (03);
+SDR 5 TDI (13) TDO (8);
+SDR 5 TDI (03);
+SDR 5 TDI (13) TDO (7);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (A);
+SDR 5 TDI (0C);
+SDR 5 TDI (1C) TDO (5);
+SDR 5 TDI (08);
+SDR 5 TDI (18) TDO (0);
+SDR 5 TDI (09);
+SDR 5 TDI (19) TDO (6);
+SDR 5 TDI (05);
+SDR 5 TDI (15) TDO (B);
+SDR 5 TDI (05);
+SDR 5 TDI (15) TDO (4);
+SDR 5 TDI (09);
+SDR 5 TDI (19) TDO (C);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (6);
+SDR 5 TDI (0D);
+SDR 5 TDI (1D) TDO (E);
+SDR 5 TDI (05);
+SDR 5 TDI (15) TDO (4);
+SDR 5 TDI (09);
+SDR 5 TDI (19) TDO (C);
+SDR 5 TDI (0E);
+SDR 5 TDI (1E) TDO (6);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (F);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (A);
+SDR 5 TDI (0B);
+SDR 5 TDI (1B) TDO (8);
+SDR 5 TDI (0D);
+SDR 5 TDI (1D) TDO (B);
+SDR 5 TDI (02);
+SDR 5 TDI (12) TDO (8);
+SDR 5 TDI (05);
+SDR 5 TDI (15) TDO (D);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (2);
+SDR 5 TDI (01);
+SDR 5 TDI (11) TDO (9);
+SDR 5 TDI (02);
+SDR 5 TDI (12) TDO (6);
+SDR 5 TDI (0C);
+SDR 5 TDI (1C) TDO (5);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (0);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (2);
+SDR 5 TDI (0E);
+SDR 5 TDI (1E) TDO (9);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (C);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (9);
+SDR 5 TDI (0C);
+SDR 5 TDI (1C) TDO (E);
+SDR 5 TDI (03);
+SDR 5 TDI (13) TDO (7);
+SDR 5 TDI (01);
+SDR 5 TDI (11) TDO (A);
+SDR 5 TDI (09);
+SDR 5 TDI (19) TDO (D);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (3);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (4);
+SDR 5 TDI (02);
+SDR 5 TDI (12) TDO (1);
+SDR 5 TDI (09);
+SDR 5 TDI (19) TDO (B);
+SDR 5 TDI (0D);
+SDR 5 TDI (1D) TDO (E);
+SDR 5 TDI (05);
+SDR 5 TDI (15) TDO (4);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (C);
+SDR 5 TDI (05);
+SDR 5 TDI (15) TDO (B);
+SDR 5 TDI (05);
+SDR 5 TDI (15) TDO (4);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (C);
+SDR 5 TDI (0D);
+SDR 5 TDI (1D) TDO (E);
+SDR 5 TDI (01);
+SDR 5 TDI (11) TDO (4);
+SDR 5 TDI (00);
+SDR 5 TDI (10) TDO (7);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (0);
+SDR 5 TDI (0E);
+SDR 5 TDI (1E) TDO (D);
+SDR 5 TDI (0C);
+SDR 5 TDI (1C) TDO (5);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (0);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (D);
+SDR 5 TDI (03);
+SDR 5 TDI (13) TDO (A);
+SDR 5 TDI (0F);
+SDR 5 TDI (1F) TDO (2);
+SDR 5 TDI (02);
+SDR 5 TDI (12) TDO (5);
+SDR 5 TDI (0A);
+SDR 5 TDI (1A) TDO (8);
+SDR 5 TDI (0B);
+SDR 5 TDI (1B) TDO (1);
+SDR 5 TDI (06);
+SDR 5 TDI (16) TDO (3);
+SDR 5 TDI (04);
+SDR 5 TDI (14) TDO (F);
+4'b0000: begin
+    casex(data_in)
+        4'b0000: state = 4'b0010;
+        4'b1000: state = 4'b0110;
+        4'b1001: state = 4'b1010;
+        4'b1111: state = 4'b1101;
+    endcase
+end
+4'b0001: begin
+    casex(data_in)
+        4'b1111: state = 4'b0000;
+        4'b1011: state = 4'b0011;
+        4'b1100: state = 4'b1000;
+        4'b0010: state = 4'b1011;
+    endcase
+end
+4'b0010: begin
+    casex(data_in)
+        4'b1011: state = 4'b0001;
+        4'b1111: state = 4'b0101;
+        4'b0110: state = 4'b0111;
+        4'b0000: state = 4'b1001;
+        4'b1100: state = 4'b1110;
+    endcase
+end
+4'b0011: begin
+    casex(data_in)
+        4'b1010: state = 4'b0100;
+        4'b0110: state = 4'b1111;
+    endcase
+end
+4'b0100: begin
+    casex(data_in)
+        4'b1111: state = 4'b0001;
+        4'b0001: state = 4'b0111;
+        4'b0101: state = 4'b1100;
+    endcase
+end
+4'b0101: begin
+    casex(data_in)
+        4'b1100: state = 4'b0000;
+        4'b0011: state = 4'b0010;
+        4'b1111: state = 4'b0100;
+        4'b0010: state = 4'b1000;
+    endcase
+end
+4'b0110: begin
+    casex(data_in)
+        4'b0001: state = 4'b0001;
+        4'b0010: state = 4'b0101;
+        4'b0011: state = 4'b1000;
+        4'b1001: state = 4'b1011;
+        4'b1111: state = 4'b1110;
+        4'b1110: state = 4'b1111;
+    endcase
+end
+4'b0111: begin
+    casex(data_in)
+        4'b0000: state = 4'b0000;
+        4'b1100: state = 4'b0010;
+        4'b0101: state = 4'b0101;
+        4'b0011: state = 4'b1010;
+    endcase
+end
+4'b1000: begin
+    casex(data_in)
+        4'b1010: state = 4'b0001;
+        4'b1101: state = 4'b0011;
+        4'b0011: state = 4'b0111;
+        4'b1011: state = 4'b1011;
+        4'b0010: state = 4'b1101;
+    endcase
+end
+4'b1001: begin
+    casex(data_in)
+        4'b0000: state = 4'b0100;
+        4'b0001: state = 4'b0110;
+        4'b1110: state = 4'b1100;
+        4'b1010: state = 4'b1110;
+    endcase
+end
+4'b1010: begin
+    casex(data_in)
+        4'b0011: state = 4'b0010;
+        4'b1111: state = 4'b0101;
+        4'b1010: state = 4'b1000;
+        4'b0001: state = 4'b1101;
+    endcase
+end
+4'b1011: begin
+    casex(data_in)
+        4'b1010: state = 4'b0001;
+        4'b0101: state = 4'b0100;
+        4'b1101: state = 4'b1000;
+        4'b1001: state = 4'b1110;
+    endcase
+end
+4'b1100: begin
+    casex(data_in)
+        4'b1110: state = 4'b0011;
+        4'b1001: state = 4'b0110;
+        4'b1010: state = 4'b1001;
+        4'b1111: state = 4'b1011;
+        4'b0000: state = 4'b1110;
+    endcase
+end
+4'b1101: begin
+    casex(data_in)
+        4'b0010: state = 4'b0000;
+        4'b0101: state = 4'b0010;
+        4'b1001: state = 4'b0011;
+        4'b1110: state = 4'b0101;
+        4'b1111: state = 4'b1010;
+    endcase
+end
+4'b1110: begin
+    casex(data_in)
+        4'b1111: state = 4'b0001;
+        4'b1101: state = 4'b0100;
+        4'b1100: state = 4'b0111;
+    endcase
+end
+4'b1111: begin
+    casex(data_in)
+        4'b1100: state = 4'b0011;
+        4'b1010: state = 4'b0110;
+        4'b0000: state = 4'b1010;
+        4'b0100: state = 4'b1100;
+    endcase
+end

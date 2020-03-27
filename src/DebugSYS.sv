@@ -389,7 +389,7 @@ module DebugSYS(
     always@(posedge clock_IR)
     begin
         if (shift_IR) begin
-            shifted_IR <= {TDI, shifted_IR[3:1]};
+            shifted_IR = {TDI, shifted_IR[3:1]};
         end
     end
 
@@ -443,9 +443,9 @@ module DebugSYS(
     always@(posedge clock_bypass)
     begin
         if (shift_DR)
-            bypass <= TDI;
+            bypass = TDI;
         else
-            bypass <= 0;
+            bypass = 0;
     end
     // END: Bypass register
 
@@ -458,7 +458,7 @@ module DebugSYS(
     always@(posedge clock_BSR)
     begin
         if (shift_DR) begin
-            shifted_BSR <= {TDI, shifted_BSR[TOTAL_WIDTH-1:1]};
+            shifted_BSR = {TDI, shifted_BSR[TOTAL_WIDTH-1:1]};
         end else begin
             shifted_BSR = {from_SYS_to_BSR, from_CL_to_BSR};
         end
@@ -478,23 +478,19 @@ module DebugSYS(
     always@(posedge TCK)
     begin
         if (rst) begin
-            main_ADDR <= {8'h00, 8'h00}; // DEFAULT START END
-            shifted_ADDR <= {8'h00, 8'h00};
+            main_ADDR = {8'h00, 8'h6C}; // DEFAULT START END
+        end else if (update_DR && (main_IR == CMD_ADDRLOAD)) begin
+            main_ADDR = shifted_ADDR;
         end
     end
 
     always@(posedge clock_ADDR)
     begin
         if (shift_DR) begin
-            shifted_ADDR <= {TDI, shifted_ADDR[15:1]};
+            shifted_ADDR = {TDI, shifted_ADDR[15:1]};
         end else begin
-            shifted_ADDR <= main_ADDR;
+            shifted_ADDR = main_ADDR;
         end
-    end
-
-    always@(posedge update_DR)
-    begin
-        main_ADDR <= shifted_ADDR;
     end
     // END: ADDR
 
@@ -506,16 +502,16 @@ module DebugSYS(
     always@(posedge clock_DLOAD)
     begin
         if(shift_DR) begin
-            shifted_DLOAD <= {TDI, shifted_DLOAD[15:1]};
+            shifted_DLOAD = {TDI, shifted_DLOAD[15:1]};
         end else begin
-            shifted_DLOAD <= 16'h0000;
+            shifted_DLOAD = 16'h0000;
         end
     end
 
     always@(posedge update_DR)
     begin
-        addr <= shifted_DLOAD[15:8];
-        write_data <= shifted_DLOAD[7:0];
+        addr = shifted_DLOAD[15:8];
+        write_data = shifted_DLOAD[7:0];
     end
     // END: DLOAD
 
@@ -525,9 +521,9 @@ module DebugSYS(
     always@(posedge clock_BIST)
     begin
         if(shift_DR) begin
-            shifted_BIST <= {1'b0, shifted_BIST[13:1]};
+            shifted_BIST = {1'b0, shifted_BIST[13:1]};
         end else begin
-            shifted_BIST <= signature;
+            shifted_BIST = signature;
         end
     end
     // END: BIST

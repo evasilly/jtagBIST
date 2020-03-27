@@ -32,7 +32,18 @@ module OnboardTop(
     output          JBM_TCK,
     output          JBM_TMS,
     output          JBM_TDI,
-    output          JBM_TDO
+    output          JBM_TDO,
+
+    output          JA_1,
+    output          JA_2,
+    output          JA_3,
+    output          JA_4,
+    output          JA_5,
+
+    output          JC_1,
+    output          JC_2,
+    output          JC_3,
+    output          JC_4
     );
 
     wire TCK, TMS, TDI, TDO;
@@ -55,6 +66,7 @@ module OnboardTop(
     wire mem_reset;
     wire [7:0] read_data;
     wire read_en;
+    wire clk_mem;
 
     wire [3:0] from_CL_to_BISTFSM;
     wire [4:0] from_BISTFSM_to_CL;
@@ -62,7 +74,20 @@ module OnboardTop(
     wire [3:0] result_from_CL;
 
     assign from_SYS_to_BSR = SW[15:11];
-    assign LED[15:12] = from_BSR_to_SYS;
+    //assign LED[15:12] = from_BSR_to_SYS;
+    assign LED[15:12] = result_from_CL; // fix
+    assign LED[4:0] = from_BISTFSM_to_CL; // delete
+
+    assign JA_1 = result_to_CL[4];
+    assign JA_2 = result_to_CL[3];
+    assign JA_3 = result_to_CL[2];
+    assign JA_4 = result_to_CL[1];
+    assign JA_5 = result_to_CL[0];
+
+    assign JC_1 = result_from_CL[3];
+    assign JC_2 = result_from_CL[2];
+    assign JC_3 = result_from_CL[1];
+    assign JC_4 = result_from_CL[0];
 
     assign TDI = JB_TDI;
     assign TMS = JB_TMS;
@@ -124,6 +149,7 @@ BIST_FSM bistfsm1(
     .idle_en(state_idle),
     .signature(signature),
 
+    .clk_mem(clk_mem),
     .mem_data(read_data),
     .read_mem(read_en),
     .addr(addr_bistfsm),

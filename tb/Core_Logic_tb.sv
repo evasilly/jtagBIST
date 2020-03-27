@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 21.12.2019 17:01:28
+// Create Date: 22.12.2019 12:13:55
 // Design Name: 
-// Module Name: CoreLogic
+// Module Name: Core_Logic_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,11 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CoreLogic(
-    input [1:0] A,
-    input [1:0] B,
-    input op_code,
-    output [3:0] result
+module Core_Logic_tb(
+
     );
-    assign result = (op_code == 1'b1) ? A + B : A * B;
 endmodule
